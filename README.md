@@ -1,8 +1,8 @@
 # Which top sites block datacenter IPs
 
-**31 of 690 sites (4%)** refuse a request from a
+**30 of 699 sites (4%)** refuse a request from a
 datacenter IP and serve the identical request from a residential one. Measured daily,
-last run **2026-09-15 07:36 UTC**.
+last run **2026-09-16 07:36 UTC**.
 
 Every host in the Tranco top 1,000 is asked for its homepage **twice at the same
 moment** — once from a datacenter IP, once through a residential exit — and only the
@@ -15,26 +15,26 @@ datacenter traffic rather than counted as a block.
 | | |
 |---|---|
 | Names ranked by Tranco | 1,000 |
-| Never dialled — no address at the apex | **228 (23%)** |
-| Serve a homepage | 772 |
-| Dialled, no clean answer | 82 |
-| **Conclusive** | **690** |
-| Refused datacenter, served residential | **31** |
+| Never dialled — no address at the apex | **227 (23%)** |
+| Serve a homepage | 773 |
+| Dialled, no clean answer | 74 |
+| **Conclusive** | **699** |
+| Refused datacenter, served residential | **30** |
 | Refused residential, served datacenter | 17 |
 
 ### Why the top 1,000 is not 1,000 websites
 
-Tranco ranks by DNS query volume, not by visitors, so **228 of these names have no
+Tranco ranks by DNS query volume, not by visitors, so **227 of these names have no
 address at their apex at all** — nameserver and CDN domains that answer billions of
 lookups and serve a homepage to nobody.
 
 | Rank | Name | Why it was not asked |
 |---|---|---|
-| 7 | `akamai.net` | unresolvable |
+| 8 | `akamai.net` | unresolvable |
 | 14 | `ezviz7.com` | unresolvable |
 | 18 | `domaincontrol.com` | private dns |
-| 21 | `hicloudcam.com` | unresolvable |
-| 24 | `akamaiedge.net` | unresolvable |
+| 23 | `akamaiedge.net` | unresolvable |
+| 24 | `hicloudcam.com` | unresolvable |
 | 26 | `gtld-servers.net` | unresolvable |
 | 27 | `akadns.net` | unresolvable |
 | 33 | `apple-dns.net` | unresolvable |
@@ -44,25 +44,25 @@ Full list: [`data/skipped-names.csv`](data/skipped-names.csv).
 This is not a footnote. A name with no address of its own still draws an answer from a
 residential exit whose resolver replies regardless, and that reads exactly like "the
 datacenter request was refused and the residential one succeeded". Resolving every name
-first is what keeps 228 infrastructure domains out of the block count.
+first is what keeps 227 infrastructure domains out of the block count.
 
 ## Rank barely predicts it
 
 | Band | Block rate | |
 |---|---|---|
-| Top 100 | 4% | 3 of 74 |
-| 101–500 | 3% | 8 of 262 |
-| 501–1,000 | 6% | 20 of 354 |
+| Top 100 | 3% | 2 of 74 |
+| 101–500 | 3% | 9 of 266 |
+| 501–1,000 | 5% | 19 of 359 |
 
 ## Who is in front of the refusal
 
 | Edge | Blockers |
 |---|---|
-| cloudflare | 13 |
+| cloudflare | 8 |
+| cloudfront | 8 |
 | undisclosed | 6 |
-| cloudfront | 5 |
 | fastly | 5 |
-| akamai | 2 |
+| akamai | 3 |
 
 "undisclosed" means the host announced no CDN in its response headers — not that it has none.
 
@@ -72,41 +72,41 @@ first is what keeps 228 infrastructure domains out of the block count.
 |---|---|---|---|---|
 | 36 | `fastly.net` | 403 | 200 | fastly |
 | 47 | `digicert.com` | 403 | 200 | fastly |
-| 83 | `openai.com` | 403 | 200 | cloudflare |
-| 111 | `reddit.com` | 403 | 200 | — |
+| 110 | `reddit.com` | 403 | 200 | — |
+| 137 | `intuit.com` | 429 | 200 | akamai |
 | 205 | `duckdns.org` | no response | 200 | — |
 | 227 | `mit.edu` | 403 | 200 | — |
-| 242 | `canva.com` | 403 | 200 | cloudflare |
-| 305 | `weibo.com` | no response | 200 | — |
-| 324 | `wiley.com` | 403 | 200 | cloudflare |
+| 304 | `weibo.com` | no response | 200 | — |
+| 323 | `wiley.com` | 403 | 200 | cloudflare |
+| 396 | `amazon.de` | 202 | 200 | cloudfront |
 | 410 | `espn.com` | 202 | 200 | cloudfront |
 | 494 | `amazon.co.jp` | 202 | 200 | cloudfront |
-| 515 | `behance.net` | 403 | 200 | fastly |
-| 530 | `ft.com` | 403 | 200 | cloudflare |
-| 538 | `fandom.com` | 403 | 200 | cloudflare |
-| 576 | `deviantart.com` | 403 | 200 | cloudfront |
-| 585 | `teamviewer.com` | 403 | 200 | cloudflare |
-| 597 | `patreon.com` | 403 | 200 | cloudflare |
-| 632 | `doctolib.fr` | 403 | 200 | cloudflare |
-| 634 | `ikea.com` | 403 | 200 | cloudflare |
-| 651 | `att.com` | 403 | 200 | akamai |
-| 685 | `imgur.com` | 429 | 200 | fastly |
+| 514 | `behance.net` | 403 | 200 | fastly |
+| 534 | `amazon.co.za` | 202 | 200 | cloudfront |
+| 575 | `deviantart.com` | 403 | 200 | cloudfront |
+| 583 | `teamviewer.com` | 403 | 200 | cloudflare |
+| 587 | `tripadvisor.com` | 403 | 200 | cloudfront |
+| 604 | `patreon.com` | 403 | 200 | cloudflare |
+| 627 | `amazon.fr` | 202 | 200 | cloudfront |
+| 634 | `doctolib.fr` | 403 | 200 | cloudflare |
+| 636 | `ikea.com` | 403 | 200 | cloudflare |
+| 668 | `att.com` | 403 | 200 | akamai |
+| 689 | `imgur.com` | 429 | 200 | fastly |
+| 723 | `amazon.es` | 202 | 200 | cloudfront |
 | 741 | `mlb.com` | 403 | 200 | fastly |
 | 770 | `mediafire.com` | 403 | 200 | cloudflare |
-| 815 | `people.com` | 403 | 200 | cloudflare |
-| 839 | `odoo.com` | 403 | 200 | — |
 
 Full set: [`data/blocked-sites.csv`](data/blocked-sites.csv) · [`data/blocked-sites.json`](data/blocked-sites.json)
 
-Currently refusing datacenter IPs: `fastly.net`, `digicert.com`, `openai.com`, `reddit.com`, `duckdns.org`, `mit.edu`, `canva.com`, `weibo.com`, `wiley.com`, `espn.com`, `amazon.co.jp`, `behance.net`.
+Currently refusing datacenter IPs: `fastly.net`, `digicert.com`, `reddit.com`, `intuit.com`, `duckdns.org`, `mit.edu`, `weibo.com`, `wiley.com`, `amazon.de`, `espn.com`, `amazon.co.jp`, `behance.net`.
 
 ## Files
 
 | File | Contents |
 |---|---|
-| [`data/blocked-sites.csv`](data/blocked-sites.csv) | 31 blockers with both statuses and the edge |
+| [`data/blocked-sites.csv`](data/blocked-sites.csv) | 30 blockers with both statuses and the edge |
 | [`data/blocked-sites.json`](data/blocked-sites.json) | the same, plus the full funnel, rank bands and edge counts |
-| [`data/skipped-names.csv`](data/skipped-names.csv) | the 228 names with no homepage to ask |
+| [`data/skipped-names.csv`](data/skipped-names.csv) | the 227 names with no homepage to ask |
 
 ```bash
 curl -s https://raw.githubusercontent.com/proxmint/blocked-sites/main/data/blocked-sites.csv

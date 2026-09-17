@@ -1,8 +1,8 @@
 # Which top sites block datacenter IPs
 
-**30 of 699 sites (4%)** refuse a request from a
+**28 of 691 sites (4%)** refuse a request from a
 datacenter IP and serve the identical request from a residential one. Measured daily,
-last run **2026-09-16 07:36 UTC**.
+last run **2026-09-17 07:36 UTC**.
 
 Every host in the Tranco top 1,000 is asked for its homepage **twice at the same
 moment** — once from a datacenter IP, once through a residential exit — and only the
@@ -15,16 +15,16 @@ datacenter traffic rather than counted as a block.
 | | |
 |---|---|
 | Names ranked by Tranco | 1,000 |
-| Never dialled — no address at the apex | **227 (23%)** |
-| Serve a homepage | 773 |
-| Dialled, no clean answer | 74 |
-| **Conclusive** | **699** |
-| Refused datacenter, served residential | **30** |
+| Never dialled — no address at the apex | **229 (23%)** |
+| Serve a homepage | 771 |
+| Dialled, no clean answer | 80 |
+| **Conclusive** | **691** |
+| Refused datacenter, served residential | **28** |
 | Refused residential, served datacenter | 17 |
 
 ### Why the top 1,000 is not 1,000 websites
 
-Tranco ranks by DNS query volume, not by visitors, so **227 of these names have no
+Tranco ranks by DNS query volume, not by visitors, so **229 of these names have no
 address at their apex at all** — nameserver and CDN domains that answer billions of
 lookups and serve a homepage to nobody.
 
@@ -34,7 +34,7 @@ lookups and serve a homepage to nobody.
 | 14 | `ezviz7.com` | unresolvable |
 | 18 | `domaincontrol.com` | private dns |
 | 23 | `akamaiedge.net` | unresolvable |
-| 24 | `hicloudcam.com` | unresolvable |
+| 25 | `hicloudcam.com` | unresolvable |
 | 26 | `gtld-servers.net` | unresolvable |
 | 27 | `akadns.net` | unresolvable |
 | 33 | `apple-dns.net` | unresolvable |
@@ -44,25 +44,25 @@ Full list: [`data/skipped-names.csv`](data/skipped-names.csv).
 This is not a footnote. A name with no address of its own still draws an answer from a
 residential exit whose resolver replies regardless, and that reads exactly like "the
 datacenter request was refused and the residential one succeeded". Resolving every name
-first is what keeps 227 infrastructure domains out of the block count.
+first is what keeps 229 infrastructure domains out of the block count.
 
 ## Rank barely predicts it
 
 | Band | Block rate | |
 |---|---|---|
-| Top 100 | 3% | 2 of 74 |
-| 101–500 | 3% | 9 of 266 |
-| 501–1,000 | 5% | 19 of 359 |
+| Top 100 | 3% | 2 of 73 |
+| 101–500 | 3% | 8 of 264 |
+| 501–1,000 | 5% | 18 of 354 |
 
 ## Who is in front of the refusal
 
 | Edge | Blockers |
 |---|---|
-| cloudflare | 8 |
-| cloudfront | 8 |
+| cloudflare | 10 |
 | undisclosed | 6 |
+| cloudfront | 5 |
 | fastly | 5 |
-| akamai | 3 |
+| akamai | 2 |
 
 "undisclosed" means the host announced no CDN in its response headers — not that it has none.
 
@@ -72,41 +72,41 @@ first is what keeps 227 infrastructure domains out of the block count.
 |---|---|---|---|---|
 | 36 | `fastly.net` | 403 | 200 | fastly |
 | 47 | `digicert.com` | 403 | 200 | fastly |
-| 110 | `reddit.com` | 403 | 200 | — |
-| 137 | `intuit.com` | 429 | 200 | akamai |
-| 205 | `duckdns.org` | no response | 200 | — |
+| 109 | `reddit.com` | 403 | 200 | — |
+| 197 | `rubiconproject.com` | no response | 200 | cloudflare |
+| 202 | `duckdns.org` | no response | 200 | — |
 | 227 | `mit.edu` | 403 | 200 | — |
 | 304 | `weibo.com` | no response | 200 | — |
-| 323 | `wiley.com` | 403 | 200 | cloudflare |
-| 396 | `amazon.de` | 202 | 200 | cloudfront |
-| 410 | `espn.com` | 202 | 200 | cloudfront |
+| 322 | `wiley.com` | 403 | 200 | cloudflare |
+| 407 | `espn.com` | 202 | 200 | cloudfront |
 | 494 | `amazon.co.jp` | 202 | 200 | cloudfront |
-| 514 | `behance.net` | 403 | 200 | fastly |
-| 534 | `amazon.co.za` | 202 | 200 | cloudfront |
-| 575 | `deviantart.com` | 403 | 200 | cloudfront |
+| 512 | `behance.net` | 403 | 200 | fastly |
+| 572 | `deviantart.com` | 403 | 200 | cloudfront |
 | 583 | `teamviewer.com` | 403 | 200 | cloudflare |
-| 587 | `tripadvisor.com` | 403 | 200 | cloudfront |
-| 604 | `patreon.com` | 403 | 200 | cloudflare |
-| 627 | `amazon.fr` | 202 | 200 | cloudfront |
-| 634 | `doctolib.fr` | 403 | 200 | cloudflare |
-| 636 | `ikea.com` | 403 | 200 | cloudflare |
-| 668 | `att.com` | 403 | 200 | akamai |
-| 689 | `imgur.com` | 429 | 200 | fastly |
-| 723 | `amazon.es` | 202 | 200 | cloudfront |
+| 584 | `tripadvisor.com` | 403 | 200 | cloudfront |
+| 608 | `patreon.com` | 403 | 200 | cloudflare |
+| 632 | `doctolib.fr` | 403 | 200 | cloudflare |
+| 634 | `ikea.com` | 403 | 200 | cloudflare |
+| 684 | `att.com` | 403 | 200 | akamai |
+| 697 | `imgur.com` | 429 | 200 | fastly |
+| 721 | `amazon.es` | 202 | 200 | cloudfront |
 | 741 | `mlb.com` | 403 | 200 | fastly |
-| 770 | `mediafire.com` | 403 | 200 | cloudflare |
+| 766 | `mediafire.com` | 403 | 200 | cloudflare |
+| 810 | `people.com` | 403 | 200 | cloudflare |
+| 839 | `odoo.com` | 403 | 200 | — |
+| 886 | `att.net` | 403 | 200 | — |
 
 Full set: [`data/blocked-sites.csv`](data/blocked-sites.csv) · [`data/blocked-sites.json`](data/blocked-sites.json)
 
-Currently refusing datacenter IPs: `fastly.net`, `digicert.com`, `reddit.com`, `intuit.com`, `duckdns.org`, `mit.edu`, `weibo.com`, `wiley.com`, `amazon.de`, `espn.com`, `amazon.co.jp`, `behance.net`.
+Currently refusing datacenter IPs: `fastly.net`, `digicert.com`, `reddit.com`, `rubiconproject.com`, `duckdns.org`, `mit.edu`, `weibo.com`, `wiley.com`, `espn.com`, `amazon.co.jp`, `behance.net`, `deviantart.com`.
 
 ## Files
 
 | File | Contents |
 |---|---|
-| [`data/blocked-sites.csv`](data/blocked-sites.csv) | 30 blockers with both statuses and the edge |
+| [`data/blocked-sites.csv`](data/blocked-sites.csv) | 28 blockers with both statuses and the edge |
 | [`data/blocked-sites.json`](data/blocked-sites.json) | the same, plus the full funnel, rank bands and edge counts |
-| [`data/skipped-names.csv`](data/skipped-names.csv) | the 227 names with no homepage to ask |
+| [`data/skipped-names.csv`](data/skipped-names.csv) | the 229 names with no homepage to ask |
 
 ```bash
 curl -s https://raw.githubusercontent.com/proxmint/blocked-sites/main/data/blocked-sites.csv

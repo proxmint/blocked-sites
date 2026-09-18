@@ -1,8 +1,8 @@
 # Which top sites block datacenter IPs
 
-**28 of 691 sites (4%)** refuse a request from a
+**22 of 684 sites (3%)** refuse a request from a
 datacenter IP and serve the identical request from a residential one. Measured daily,
-last run **2026-09-17 07:36 UTC**.
+last run **2026-09-18 07:36 UTC**.
 
 Every host in the Tranco top 1,000 is asked for its homepage **twice at the same
 moment** — once from a datacenter IP, once through a residential exit — and only the
@@ -17,10 +17,10 @@ datacenter traffic rather than counted as a block.
 | Names ranked by Tranco | 1,000 |
 | Never dialled — no address at the apex | **229 (23%)** |
 | Serve a homepage | 771 |
-| Dialled, no clean answer | 80 |
-| **Conclusive** | **691** |
-| Refused datacenter, served residential | **28** |
-| Refused residential, served datacenter | 17 |
+| Dialled, no clean answer | 87 |
+| **Conclusive** | **684** |
+| Refused datacenter, served residential | **22** |
+| Refused residential, served datacenter | 23 |
 
 ### Why the top 1,000 is not 1,000 websites
 
@@ -30,13 +30,13 @@ lookups and serve a homepage to nobody.
 
 | Rank | Name | Why it was not asked |
 |---|---|---|
-| 8 | `akamai.net` | unresolvable |
+| 7 | `akamai.net` | unresolvable |
 | 14 | `ezviz7.com` | unresolvable |
-| 18 | `domaincontrol.com` | private dns |
+| 19 | `domaincontrol.com` | private dns |
 | 23 | `akamaiedge.net` | unresolvable |
-| 25 | `hicloudcam.com` | unresolvable |
-| 26 | `gtld-servers.net` | unresolvable |
-| 27 | `akadns.net` | unresolvable |
+| 25 | `gtld-servers.net` | unresolvable |
+| 26 | `akadns.net` | unresolvable |
+| 27 | `hicloudcam.com` | unresolvable |
 | 33 | `apple-dns.net` | unresolvable |
 
 Full list: [`data/skipped-names.csv`](data/skipped-names.csv).
@@ -51,17 +51,17 @@ first is what keeps 229 infrastructure domains out of the block count.
 | Band | Block rate | |
 |---|---|---|
 | Top 100 | 3% | 2 of 73 |
-| 101–500 | 3% | 8 of 264 |
-| 501–1,000 | 5% | 18 of 354 |
+| 101–500 | 2% | 5 of 260 |
+| 501–1,000 | 4% | 15 of 351 |
 
 ## Who is in front of the refusal
 
 | Edge | Blockers |
 |---|---|
-| cloudflare | 10 |
-| undisclosed | 6 |
-| cloudfront | 5 |
+| cloudflare | 8 |
+| undisclosed | 5 |
 | fastly | 5 |
+| cloudfront | 2 |
 | akamai | 2 |
 
 "undisclosed" means the host announced no CDN in its response headers — not that it has none.
@@ -73,38 +73,35 @@ first is what keeps 229 infrastructure domains out of the block count.
 | 36 | `fastly.net` | 403 | 200 | fastly |
 | 47 | `digicert.com` | 403 | 200 | fastly |
 | 109 | `reddit.com` | 403 | 200 | — |
-| 197 | `rubiconproject.com` | no response | 200 | cloudflare |
-| 202 | `duckdns.org` | no response | 200 | — |
-| 227 | `mit.edu` | 403 | 200 | — |
-| 304 | `weibo.com` | no response | 200 | — |
-| 322 | `wiley.com` | 403 | 200 | cloudflare |
-| 407 | `espn.com` | 202 | 200 | cloudfront |
-| 494 | `amazon.co.jp` | 202 | 200 | cloudfront |
+| 226 | `mit.edu` | 403 | 200 | — |
+| 306 | `weibo.com` | no response | 200 | — |
+| 319 | `wiley.com` | 403 | 200 | cloudflare |
+| 403 | `espn.com` | 202 | 200 | cloudfront |
 | 512 | `behance.net` | 403 | 200 | fastly |
-| 572 | `deviantart.com` | 403 | 200 | cloudfront |
 | 583 | `teamviewer.com` | 403 | 200 | cloudflare |
-| 584 | `tripadvisor.com` | 403 | 200 | cloudfront |
-| 608 | `patreon.com` | 403 | 200 | cloudflare |
-| 632 | `doctolib.fr` | 403 | 200 | cloudflare |
-| 634 | `ikea.com` | 403 | 200 | cloudflare |
-| 684 | `att.com` | 403 | 200 | akamai |
+| 622 | `patreon.com` | 403 | 200 | cloudflare |
+| 634 | `doctolib.fr` | 403 | 200 | cloudflare |
+| 636 | `ikea.com` | 403 | 200 | cloudflare |
 | 697 | `imgur.com` | 429 | 200 | fastly |
-| 721 | `amazon.es` | 202 | 200 | cloudfront |
-| 741 | `mlb.com` | 403 | 200 | fastly |
-| 766 | `mediafire.com` | 403 | 200 | cloudflare |
-| 810 | `people.com` | 403 | 200 | cloudflare |
-| 839 | `odoo.com` | 403 | 200 | — |
-| 886 | `att.net` | 403 | 200 | — |
+| 717 | `att.com` | 403 | 200 | akamai |
+| 740 | `mlb.com` | 403 | 200 | fastly |
+| 765 | `mediafire.com` | 403 | 200 | cloudflare |
+| 837 | `odoo.com` | 403 | 200 | — |
+| 862 | `amazon.com.br` | 202 | 200 | cloudfront |
+| 885 | `att.net` | 403 | 200 | — |
+| 899 | `kleinanzeigen.de` | 403 | 200 | akamai |
+| 943 | `genius.com` | 403 | 200 | cloudflare |
+| 959 | `chaturbate.com` | 403 | 200 | cloudflare |
 
 Full set: [`data/blocked-sites.csv`](data/blocked-sites.csv) · [`data/blocked-sites.json`](data/blocked-sites.json)
 
-Currently refusing datacenter IPs: `fastly.net`, `digicert.com`, `reddit.com`, `rubiconproject.com`, `duckdns.org`, `mit.edu`, `weibo.com`, `wiley.com`, `espn.com`, `amazon.co.jp`, `behance.net`, `deviantart.com`.
+Currently refusing datacenter IPs: `fastly.net`, `digicert.com`, `reddit.com`, `mit.edu`, `weibo.com`, `wiley.com`, `espn.com`, `behance.net`, `teamviewer.com`, `patreon.com`, `doctolib.fr`, `ikea.com`.
 
 ## Files
 
 | File | Contents |
 |---|---|
-| [`data/blocked-sites.csv`](data/blocked-sites.csv) | 28 blockers with both statuses and the edge |
+| [`data/blocked-sites.csv`](data/blocked-sites.csv) | 22 blockers with both statuses and the edge |
 | [`data/blocked-sites.json`](data/blocked-sites.json) | the same, plus the full funnel, rank bands and edge counts |
 | [`data/skipped-names.csv`](data/skipped-names.csv) | the 229 names with no homepage to ask |
 
@@ -133,7 +130,7 @@ curl 'https://proxmint.com/api/site-blocks?blocked=all'
 - Homepages only. No logged-in pages, no search endpoints, no APIs.
 - One datacenter provider and one residential pool. A different pair would move the number; the direction should hold.
 - A snapshot per host, not a rate over time. A soft block that fires on the second request looks like a pass here.
-- A bot wall that returns `200` with a challenge body counts as served, so **4% is a floor, not a ceiling**.
+- A bot wall that returns `200` with a challenge body counts as served, so **3% is a floor, not a ceiling**.
 - The crawler identifies itself as `ProxmintBench/1.0` rather than impersonating a browser. A browser user-agent with realistic Accept headers changed no status on either leg.
 
 ## Licence

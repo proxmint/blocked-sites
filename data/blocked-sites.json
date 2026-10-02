@@ -1,23 +1,23 @@
 {
-  "updatedAt": "2026-10-01T07:36:50.813Z",
-  "measuredAt": "2026-10-01T07:36:47.449Z",
+  "updatedAt": "2026-10-02T07:36:47.450Z",
+  "measuredAt": "2026-10-02T07:36:44.286Z",
   "source": "https://proxmint.com/free-proxies/blocked-sites",
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
   "funnel": {
     "ranked": 1000,
-    "skipped": 225,
-    "served": 775,
-    "dialledNoAnswer": 95,
-    "conclusive": 680,
-    "dcBlocked": 30,
-    "dcBlockedRate": 0.0441,
-    "resiBlocked": 5
+    "skipped": 226,
+    "served": 774,
+    "dialledNoAnswer": 97,
+    "conclusive": 677,
+    "dcBlocked": 38,
+    "dcBlockedRate": 0.0561,
+    "resiBlocked": 0
   },
   "byEdge": [
     {
       "edge": "cloudflare",
-      "blocked": 13
+      "blocked": 20
     },
     {
       "edge": "undisclosed",
@@ -33,27 +33,27 @@
     },
     {
       "edge": "akamai",
-      "blocked": 2
+      "blocked": 3
     }
   ],
   "bands": [
     {
       "label": "Top 100",
-      "blocked": 3,
-      "conclusive": 73,
-      "rate": 0.0411
+      "blocked": 2,
+      "conclusive": 71,
+      "rate": 0.0282
     },
     {
       "label": "101–500",
-      "blocked": 6,
-      "conclusive": 256,
-      "rate": 0.0234
+      "blocked": 10,
+      "conclusive": 254,
+      "rate": 0.0394
     },
     {
       "label": "501–1,000",
-      "blocked": 21,
-      "conclusive": 351,
-      "rate": 0.0598
+      "blocked": 26,
+      "conclusive": 352,
+      "rate": 0.0739
     }
   ],
   "blockers": [
@@ -72,18 +72,18 @@
       "edge": "fastly"
     },
     {
-      "host": "chatgpt.com",
-      "rank": 83,
-      "dcStatus": 403,
-      "resiStatus": 200,
-      "edge": "cloudflare"
-    },
-    {
       "host": "reddit.com",
       "rank": 109,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": null
+    },
+    {
+      "host": "intuit.com",
+      "rank": 135,
+      "dcStatus": 429,
+      "resiStatus": 200,
+      "edge": "akamai"
     },
     {
       "host": "duckdns.org",
@@ -93,43 +93,71 @@
       "edge": null
     },
     {
+      "host": "rubiconproject.com",
+      "rank": 225,
+      "dcStatus": 403,
+      "resiStatus": 200,
+      "edge": "cloudflare"
+    },
+    {
+      "host": "vungle.com",
+      "rank": 226,
+      "dcStatus": 403,
+      "resiStatus": 200,
+      "edge": "cloudflare"
+    },
+    {
       "host": "mit.edu",
-      "rank": 229,
+      "rank": 230,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": null
     },
     {
+      "host": "forter.com",
+      "rank": 279,
+      "dcStatus": 403,
+      "resiStatus": 200,
+      "edge": "cloudflare"
+    },
+    {
       "host": "weibo.com",
-      "rank": 311,
+      "rank": 310,
       "dcStatus": null,
       "resiStatus": 200,
       "edge": null
     },
     {
       "host": "wiley.com",
-      "rank": 328,
+      "rank": 327,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": "cloudflare"
     },
     {
       "host": "espn.com",
-      "rank": 404,
+      "rank": 403,
+      "dcStatus": 202,
+      "resiStatus": 200,
+      "edge": "cloudfront"
+    },
+    {
+      "host": "amazon.co.za",
+      "rank": 501,
       "dcStatus": 202,
       "resiStatus": 200,
       "edge": "cloudfront"
     },
     {
       "host": "deviantart.com",
-      "rank": 576,
+      "rank": 577,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": "cloudfront"
     },
     {
       "host": "teamviewer.com",
-      "rank": 592,
+      "rank": 593,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": "cloudflare"
@@ -143,87 +171,94 @@
     },
     {
       "host": "avito.ru",
-      "rank": 613,
+      "rank": 614,
       "dcStatus": 429,
       "resiStatus": 200,
       "edge": null
     },
     {
-      "host": "amazon.fr",
-      "rank": 627,
-      "dcStatus": 202,
+      "host": "berkeley.edu",
+      "rank": 620,
+      "dcStatus": 403,
       "resiStatus": 200,
-      "edge": "cloudfront"
+      "edge": "cloudflare"
     },
     {
       "host": "ikea.com",
-      "rank": 633,
+      "rank": 632,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": "cloudflare"
     },
     {
       "host": "doctolib.fr",
-      "rank": 640,
+      "rank": 639,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": "cloudflare"
     },
     {
       "host": "imgur.com",
-      "rank": 738,
+      "rank": 742,
       "dcStatus": 429,
       "resiStatus": 200,
       "edge": "fastly"
     },
     {
       "host": "mlb.com",
-      "rank": 772,
+      "rank": 768,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": "fastly"
     },
     {
       "host": "mediafire.com",
-      "rank": 775,
+      "rank": 770,
+      "dcStatus": 403,
+      "resiStatus": 200,
+      "edge": "cloudflare"
+    },
+    {
+      "host": "singular.net",
+      "rank": 794,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": "cloudflare"
     },
     {
       "host": "patreon.com",
-      "rank": 789,
+      "rank": 801,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": "cloudflare"
     },
     {
-      "host": "people.com",
-      "rank": 819,
+      "host": "liftoff.io",
+      "rank": 826,
+      "dcStatus": 403,
+      "resiStatus": 200,
+      "edge": "cloudflare"
+    },
+    {
+      "host": "networkadvertising.org",
+      "rank": 832,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": "cloudflare"
     },
     {
       "host": "odoo.com",
-      "rank": 834,
+      "rank": 835,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": null
     },
     {
       "host": "att.com",
-      "rank": 855,
+      "rank": 851,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": "akamai"
-    },
-    {
-      "host": "pexels.com",
-      "rank": 858,
-      "dcStatus": 403,
-      "resiStatus": 200,
-      "edge": "cloudflare"
     },
     {
       "host": "kleinanzeigen.de",
@@ -233,36 +268,57 @@
       "edge": "akamai"
     },
     {
+      "host": "readthedocs.io",
+      "rank": 912,
+      "dcStatus": 429,
+      "resiStatus": 200,
+      "edge": "cloudflare"
+    },
+    {
+      "host": "fwmrm.net",
+      "rank": 913,
+      "dcStatus": 403,
+      "resiStatus": 200,
+      "edge": "cloudflare"
+    },
+    {
+      "host": "thenai.org",
+      "rank": 924,
+      "dcStatus": 403,
+      "resiStatus": 200,
+      "edge": "cloudflare"
+    },
+    {
       "host": "wyzecam.com",
-      "rank": 928,
+      "rank": 929,
       "dcStatus": 429,
       "resiStatus": 200,
       "edge": "cloudflare"
     },
     {
       "host": "att.net",
-      "rank": 933,
+      "rank": 930,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": null
     },
     {
       "host": "genius.com",
-      "rank": 940,
+      "rank": 938,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": "cloudflare"
     },
     {
       "host": "chaturbate.com",
-      "rank": 956,
+      "rank": 953,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": "cloudflare"
     },
     {
-      "host": "investopedia.com",
-      "rank": 988,
+      "host": "conviva.com",
+      "rank": 987,
       "dcStatus": 403,
       "resiStatus": 200,
       "edge": "cloudflare"

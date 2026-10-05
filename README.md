@@ -2,7 +2,7 @@
 
 **42 of 681 sites (6%)** refuse a request from a
 datacenter IP and serve the identical request from a residential one. Measured daily,
-last run **2026-10-04 07:36 UTC**.
+last run **2026-10-05 07:36 UTC**.
 
 Every host in the Tranco top 1,000 is asked for its homepage **twice at the same
 moment** — once from a datacenter IP, once through a residential exit — and only the
@@ -34,8 +34,8 @@ lookups and serve a homepage to nobody.
 | 14 | `ezviz7.com` | unresolvable |
 | 15 | `domaincontrol.com` | private dns |
 | 20 | `akamaiedge.net` | unresolvable |
+| 22 | `hicloudcam.com` | unresolvable |
 | 24 | `akadns.net` | unresolvable |
-| 25 | `hicloudcam.com` | unresolvable |
 | 28 | `gtld-servers.net` | unresolvable |
 | 34 | `apple-dns.net` | unresolvable |
 
@@ -50,17 +50,17 @@ first is what keeps 226 infrastructure domains out of the block count.
 
 | Band | Block rate | |
 |---|---|---|
-| Top 100 | 5% | 4 of 74 |
-| 101–500 | 4% | 11 of 254 |
-| 501–1,000 | 8% | 27 of 353 |
+| Top 100 | 3% | 2 of 74 |
+| 101–500 | 5% | 12 of 255 |
+| 501–1,000 | 8% | 28 of 352 |
 
 ## Who is in front of the refusal
 
 | Edge | Blockers |
 |---|---|
-| cloudflare | 24 |
-| undisclosed | 6 |
-| cloudfront | 6 |
+| cloudflare | 21 |
+| undisclosed | 10 |
+| cloudfront | 5 |
 | fastly | 4 |
 | akamai | 2 |
 
@@ -70,35 +70,35 @@ first is what keeps 226 infrastructure domains out of the block count.
 
 | Rank | Site | From datacenter | From residential | Edge |
 |---|---|---|---|---|
-| 26 | `amazon.com` | 202 | 200 | cloudfront |
 | 36 | `fastly.net` | 403 | 200 | fastly |
 | 50 | `digicert.com` | 403 | 200 | fastly |
-| 85 | `chatgpt.com` | 403 | 200 | cloudflare |
-| 109 | `reddit.com` | 403 | 200 | — |
-| 198 | `duckdns.org` | no response | 200 | — |
-| 229 | `rubiconproject.com` | 403 | 200 | cloudflare |
-| 231 | `mit.edu` | 403 | 200 | — |
-| 239 | `vungle.com` | 403 | 200 | cloudflare |
-| 249 | `canva.com` | 403 | 200 | cloudflare |
+| 108 | `reddit.com` | 403 | 200 | — |
+| 199 | `duckdns.org` | no response | 200 | — |
+| 230 | `mit.edu` | 403 | 200 | — |
+| 236 | `rubiconproject.com` | 403 | 200 | cloudflare |
+| 237 | `ozon.ru` | no response | 307 | — |
+| 240 | `vungle.com` | 403 | 200 | cloudflare |
 | 279 | `forter.com` | 403 | 200 | cloudflare |
 | 313 | `weibo.com` | no response | 200 | — |
 | 330 | `wiley.com` | 403 | 200 | cloudflare |
-| 404 | `espn.com` | 202 | 200 | cloudfront |
-| 499 | `amazon.co.jp` | 202 | 200 | cloudfront |
-| 548 | `oup.com` | 403 | 200 | cloudflare |
-| 566 | `branch.io` | 403 | 200 | cloudflare |
-| 578 | `deviantart.com` | 403 | 200 | cloudfront |
-| 591 | `teamviewer.com` | 403 | 200 | cloudflare |
-| 598 | `tripadvisor.com` | 403 | 200 | cloudfront |
-| 622 | `berkeley.edu` | 403 | 200 | cloudflare |
-| 634 | `ikea.com` | 403 | 200 | cloudflare |
-| 686 | `amazon.in` | 202 | 200 | cloudfront |
-| 749 | `imgur.com` | 429 | 200 | fastly |
-| 766 | `chatgpt.site` | 403 | 200 | cloudflare |
+| 341 | `amazon.co.uk` | 202 | 200 | cloudfront |
+| 406 | `espn.com` | 202 | 200 | cloudfront |
+| 495 | `amazon.co.za` | 202 | 200 | cloudfront |
+| 549 | `oup.com` | 403 | 200 | cloudflare |
+| 555 | `branch.io` | 403 | 200 | cloudflare |
+| 581 | `deviantart.com` | 403 | 200 | cloudfront |
+| 594 | `teamviewer.com` | 403 | 200 | cloudflare |
+| 611 | `target.com` | 429 | 200 | — |
+| 625 | `berkeley.edu` | 403 | 200 | cloudflare |
+| 637 | `ikea.com` | 403 | 200 | cloudflare |
+| 643 | `doctolib.fr` | 403 | 200 | cloudflare |
+| 644 | `amazon.ca` | 202 | 200 | cloudfront |
+| 646 | `tencent.com` | no response | 200 | — |
+| 753 | `imgur.com` | 429 | 200 | fastly |
 
 Full set: [`data/blocked-sites.csv`](data/blocked-sites.csv) · [`data/blocked-sites.json`](data/blocked-sites.json)
 
-Currently refusing datacenter IPs: `amazon.com`, `fastly.net`, `digicert.com`, `chatgpt.com`, `reddit.com`, `duckdns.org`, `rubiconproject.com`, `mit.edu`, `vungle.com`, `canva.com`, `forter.com`, `weibo.com`.
+Currently refusing datacenter IPs: `fastly.net`, `digicert.com`, `reddit.com`, `duckdns.org`, `mit.edu`, `rubiconproject.com`, `ozon.ru`, `vungle.com`, `forter.com`, `weibo.com`, `wiley.com`, `amazon.co.uk`.
 
 ## Files
 

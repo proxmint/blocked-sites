@@ -1,8 +1,8 @@
 # Which top sites block datacenter IPs
 
-**42 of 681 sites (6%)** refuse a request from a
+**44 of 680 sites (6%)** refuse a request from a
 datacenter IP and serve the identical request from a residential one. Measured daily,
-last run **2026-10-05 07:36 UTC**.
+last run **2026-10-06 07:36 UTC**.
 
 Every host in the Tranco top 1,000 is asked for its homepage **twice at the same
 moment** — once from a datacenter IP, once through a residential exit — and only the
@@ -17,10 +17,10 @@ datacenter traffic rather than counted as a block.
 | Names ranked by Tranco | 1,000 |
 | Never dialled — no address at the apex | **226 (23%)** |
 | Serve a homepage | 774 |
-| Dialled, no clean answer | 93 |
-| **Conclusive** | **681** |
-| Refused datacenter, served residential | **42** |
-| Refused residential, served datacenter | 4 |
+| Dialled, no clean answer | 94 |
+| **Conclusive** | **680** |
+| Refused datacenter, served residential | **44** |
+| Refused residential, served datacenter | 3 |
 
 ### Why the top 1,000 is not 1,000 websites
 
@@ -31,10 +31,10 @@ lookups and serve a homepage to nobody.
 | Rank | Name | Why it was not asked |
 |---|---|---|
 | 6 | `akamai.net` | unresolvable |
-| 14 | `ezviz7.com` | unresolvable |
+| 12 | `ezviz7.com` | unresolvable |
 | 15 | `domaincontrol.com` | private dns |
 | 20 | `akamaiedge.net` | unresolvable |
-| 22 | `hicloudcam.com` | unresolvable |
+| 21 | `hicloudcam.com` | unresolvable |
 | 24 | `akadns.net` | unresolvable |
 | 28 | `gtld-servers.net` | unresolvable |
 | 34 | `apple-dns.net` | unresolvable |
@@ -50,17 +50,17 @@ first is what keeps 226 infrastructure domains out of the block count.
 
 | Band | Block rate | |
 |---|---|---|
-| Top 100 | 3% | 2 of 74 |
-| 101–500 | 5% | 12 of 255 |
-| 501–1,000 | 8% | 28 of 352 |
+| Top 100 | 3% | 2 of 73 |
+| 101–500 | 4% | 11 of 256 |
+| 501–1,000 | 9% | 31 of 351 |
 
 ## Who is in front of the refusal
 
 | Edge | Blockers |
 |---|---|
-| cloudflare | 21 |
-| undisclosed | 10 |
-| cloudfront | 5 |
+| cloudflare | 24 |
+| undisclosed | 8 |
+| cloudfront | 6 |
 | fastly | 4 |
 | akamai | 2 |
 
@@ -72,39 +72,39 @@ first is what keeps 226 infrastructure domains out of the block count.
 |---|---|---|---|---|
 | 36 | `fastly.net` | 403 | 200 | fastly |
 | 50 | `digicert.com` | 403 | 200 | fastly |
-| 108 | `reddit.com` | 403 | 200 | — |
-| 199 | `duckdns.org` | no response | 200 | — |
-| 230 | `mit.edu` | 403 | 200 | — |
-| 236 | `rubiconproject.com` | 403 | 200 | cloudflare |
-| 237 | `ozon.ru` | no response | 307 | — |
-| 240 | `vungle.com` | 403 | 200 | cloudflare |
+| 107 | `reddit.com` | 403 | 200 | — |
+| 198 | `duckdns.org` | no response | 200 | — |
+| 231 | `mit.edu` | 403 | 200 | — |
+| 240 | `rubiconproject.com` | 403 | 200 | cloudflare |
+| 242 | `vungle.com` | 403 | 200 | cloudflare |
+| 250 | `canva.com` | 403 | 200 | cloudflare |
 | 279 | `forter.com` | 403 | 200 | cloudflare |
 | 313 | `weibo.com` | no response | 200 | — |
-| 330 | `wiley.com` | 403 | 200 | cloudflare |
-| 341 | `amazon.co.uk` | 202 | 200 | cloudfront |
-| 406 | `espn.com` | 202 | 200 | cloudfront |
-| 495 | `amazon.co.za` | 202 | 200 | cloudfront |
-| 549 | `oup.com` | 403 | 200 | cloudflare |
-| 555 | `branch.io` | 403 | 200 | cloudflare |
-| 581 | `deviantart.com` | 403 | 200 | cloudfront |
-| 594 | `teamviewer.com` | 403 | 200 | cloudflare |
-| 611 | `target.com` | 429 | 200 | — |
-| 625 | `berkeley.edu` | 403 | 200 | cloudflare |
-| 637 | `ikea.com` | 403 | 200 | cloudflare |
+| 331 | `wiley.com` | 403 | 200 | cloudflare |
+| 408 | `espn.com` | 202 | 200 | cloudfront |
+| 495 | `amazon.co.jp` | 202 | 200 | cloudfront |
+| 518 | `amazon.co.za` | 202 | 200 | cloudfront |
+| 543 | `branch.io` | 403 | 200 | cloudflare |
+| 548 | `oup.com` | 403 | 200 | cloudflare |
+| 583 | `deviantart.com` | 403 | 200 | cloudfront |
+| 589 | `aboutads.info` | 403 | 202 | — |
+| 593 | `teamviewer.com` | 403 | 200 | cloudflare |
+| 596 | `tripadvisor.com` | 403 | 200 | cloudfront |
+| 626 | `berkeley.edu` | 403 | 200 | cloudflare |
+| 638 | `ikea.com` | 403 | 200 | cloudflare |
 | 643 | `doctolib.fr` | 403 | 200 | cloudflare |
-| 644 | `amazon.ca` | 202 | 200 | cloudfront |
-| 646 | `tencent.com` | no response | 200 | — |
-| 753 | `imgur.com` | 429 | 200 | fastly |
+| 721 | `amazon.es` | 202 | 200 | cloudfront |
+| 758 | `imgur.com` | 429 | 200 | fastly |
 
 Full set: [`data/blocked-sites.csv`](data/blocked-sites.csv) · [`data/blocked-sites.json`](data/blocked-sites.json)
 
-Currently refusing datacenter IPs: `fastly.net`, `digicert.com`, `reddit.com`, `duckdns.org`, `mit.edu`, `rubiconproject.com`, `ozon.ru`, `vungle.com`, `forter.com`, `weibo.com`, `wiley.com`, `amazon.co.uk`.
+Currently refusing datacenter IPs: `fastly.net`, `digicert.com`, `reddit.com`, `duckdns.org`, `mit.edu`, `rubiconproject.com`, `vungle.com`, `canva.com`, `forter.com`, `weibo.com`, `wiley.com`, `espn.com`.
 
 ## Files
 
 | File | Contents |
 |---|---|
-| [`data/blocked-sites.csv`](data/blocked-sites.csv) | 42 blockers with both statuses and the edge |
+| [`data/blocked-sites.csv`](data/blocked-sites.csv) | 44 blockers with both statuses and the edge |
 | [`data/blocked-sites.json`](data/blocked-sites.json) | the same, plus the full funnel, rank bands and edge counts |
 | [`data/skipped-names.csv`](data/skipped-names.csv) | the 226 names with no homepage to ask |
 
